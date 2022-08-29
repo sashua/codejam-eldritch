@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
     <title>Codejam</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <form class="settings js-settings">
+        <div class="settings__ancients js-ancients"></div>
+        <div class="settings__difficulties js-difficulties"></div>
+        <button class="button settings__submit js-submit" type="submit">
+          <img src="./assets/pentagram.png" alt="" />
+        </button>
+      </form>
+
+      <div class="deck is-hidden js-deck">
+        <h2 class="deck__name js-name"></h2>
+        <div class="deck__stages js-stages"></div>
+        <div class="deck__cards js-cards"></div>
+        <button class="button deck__reset js-reset" type="button">
+          <img src="./assets/pentagram.png" alt="" />
+        </button>
+      </div>
+    </main>
+  </body>
 </html>

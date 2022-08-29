@@ -14,6 +14,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -31,6 +35,7 @@ module.exports = {
         test: /\.png/,
         type: "asset/resource",
       },
+      { test: /\.handlebars$/, loader: "handlebars-loader" },
     ],
   },
 
@@ -42,6 +47,7 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
 
+  devtool: "source-map",
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),

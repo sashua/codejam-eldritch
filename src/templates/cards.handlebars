@@ -1,0 +1,12 @@
+<div class="cards">
+  {{#each cards}}
+    <div id="{{this.id}}" class="card" data-color="{{this.color}}">
+      <div class="card__face card__face--back">
+        <img src="{{this.cardBack}}" alt="Card back" />
+      </div>
+      <div class="card__face card__face--front">
+        <img src="{{this.cardFace}}" alt="Card front" />
+      </div>
+    </div>
+  {{/each}}
+</div>

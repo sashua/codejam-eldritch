@@ -1,0 +1,94 @@
+.settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $transition-params, visibility $transition-params;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.settings__submit {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+}
+
+// === Ancients start ===
+.ancients__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+
+  color: $text-color;
+  opacity: 0.5;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-shadow: $black-text-shadow;
+}
+
+.ancients__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.ancient__thumb {
+  width: 240px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: $black-box-shadow;
+  transition: box-shadow $transition-params, transform $transition-params;
+
+  .ancient__input:checked + & {
+    box-shadow: $fire-box-shadow;
+  }
+}
+// --- Ancients end ---
+
+// === Difficulties start ===
+.difficulties__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+
+  color: $text-color;
+  opacity: 0.5;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-shadow: $black-text-shadow;
+}
+
+.difficulties__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.difficulty__name {
+  font-size: 22px;
+
+  color: $text-color;
+  text-transform: capitalize;
+  text-shadow: $black-text-shadow;
+  transition: text-shadow $transition-params, transform $transition-params;
+
+  .difficulty__input:checked + & {
+    text-shadow: $fire-text-shadow;
+  }
+}
+// --- Difficulties end ---
