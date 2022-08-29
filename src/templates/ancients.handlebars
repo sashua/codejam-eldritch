@@ -1,26 +1,24 @@
-<div class="ancients">
-  <p class="ancients__title">
-    Древние
-  </p>
-  <ul class="ancients__list">
-    {{#each ancients}}
-      <li>
-        <label class="ancient">
-          <input
-            class="ancient__input visually-hidden"
-            type="radio"
-            name="ancient"
-            value="{{this.id}}"
+<p class="ancients__title">
+  Древние
+</p>
+<ul class="ancients__list">
+  {{#each ancients}}
+    <li>
+      <label class="ancient">
+        <input
+          class="ancient__input visually-hidden"
+          type="radio"
+          name="ancient"
+          value="{{this.id}}"
+        />
+        <div class="ancient__thumb">
+          <img
+            class="ancient__img"
+            src="{{this.cardFace}}"
+            alt="{{this.name}}"
           />
-          <div class="ancient__thumb">
-            <img
-              class="ancient__img"
-              src="{{this.cardFace}}"
-              alt="{{this.name}}"
-            />
-          </div>
-        </label>
-      </li>
-    {{/each}}
-  </ul>
-</div>
+        </div>
+      </label>
+    </li>
+  {{/each}}
+</ul>

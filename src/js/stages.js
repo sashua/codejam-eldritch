@@ -31,7 +31,7 @@ export class StagesModel {
   }
 
   set stages({ firstStage, secondStage, thirdStage }) {
-    this.#stages = [firstStage, secondStage, thirdStage];
+    this.#stages = [{ ...firstStage }, { ...secondStage }, { ...thirdStage }];
     this.#onChange();
   }
 

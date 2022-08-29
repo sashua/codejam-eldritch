@@ -15,23 +15,29 @@
     <title>Codejam</title>
   </head>
   <body>
-    <main>
-      <form class="settings js-settings">
-        <div class="settings__ancients js-ancients"></div>
-        <div class="settings__difficulties js-difficulties"></div>
-        <button class="button settings__submit js-submit" type="submit">
-          <img src="./assets/pentagram.png" alt="" />
-        </button>
-      </form>
-
-      <div class="deck is-hidden js-deck">
-        <h2 class="deck__name js-name"></h2>
-        <div class="deck__stages js-stages"></div>
-        <div class="deck__cards js-cards"></div>
-        <button class="button deck__reset js-reset" type="button">
-          <img src="./assets/pentagram.png" alt="" />
-        </button>
+    <form class="settings page js-settings">
+      <div class="container">
+        <div class="ancients js-ancients"></div>
+        <div class="settings__wrap">
+          <div class="difficulties js-difficulties"></div>
+          <button class="button settings__submit js-submit" type="submit">
+            <img src="./assets/pentagram.png" alt="" />
+          </button>
+        </div>
       </div>
-    </main>
+    </form>
+
+    <div class="deck page is-hidden js-deck">
+      <div class="container">
+        <h2 class="deck__title js-name"></h2>
+        <div class="cards js-cards"></div>
+        <div class="deck__wrap">
+          <div class="stages js-stages"></div>
+          <button class="button deck__reset js-reset" type="button">
+            <img src="./assets/pentagram.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

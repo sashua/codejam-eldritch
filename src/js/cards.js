@@ -37,6 +37,12 @@ export class CardsView {
     if (!card) {
       return;
     }
+
+    const zoomedCard = this.#getZoomedCard();
+    if (zoomedCard && card !== zoomedCard) {
+      return;
+    }
+
     card.parentNode.appendChild(card);
     setTimeout(() => {
       this.openCard(card.id);
@@ -48,6 +54,10 @@ export class CardsView {
 
   #bindEvents() {
     this.#rootElem.addEventListener("click", this.#onCardClick.bind(this));
+  }
+
+  #getZoomedCard() {
+    return this.#rootElem.querySelector(".card--zoomed");
   }
 }
 // --- Cards view end ---

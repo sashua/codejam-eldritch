@@ -1,20 +1,18 @@
-<div class="difficulties">
-  <p class="difficulties__title">
-    Cложность
-  </p>
-  <ul class="difficulties__list">
-    {{#each difficulties}}
-      <li>
-        <label class="difficulty">
-          <input
-            class="difficulty__input visually-hidden"
-            type="radio"
-            name="difficulty"
-            value="{{this.id}}"
-          />
-          <span class="difficulty__name">{{this.name}}</span>
-        </label>
-      </li>
-    {{/each}}
-  </ul>
-</div>
+<p class="difficulties__title">
+  Cложность
+</p>
+<ul class="difficulties__list">
+  {{#each difficulties}}
+    <li>
+      <label class="difficulty">
+        <input
+          class="difficulty__input visually-hidden"
+          type="radio"
+          name="difficulty"
+          value="{{this.id}}"
+        />
+        <span class="difficulty__name">{{this.name}}</span>
+      </label>
+    </li>
+  {{/each}}
+</ul>

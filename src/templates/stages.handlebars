@@ -1,4 +1,4 @@
-<ol class="stages">
+<ol class="stages__list">
   {{#each stages}}
     <li class="stage {{#if this.isEmpty}}stage--empty{{/if}}">
       <span class="stage__name">{{this.name}}:</span>
@@ -7,6 +7,7 @@
         <li class="stage__item">{{this.brownCards}}</li>
         <li class="stage__item">{{this.blueCards}}</li>
       </ul>
+      <span class="stage__space"></span>
     </li>
   {{/each}}
 </ol>
