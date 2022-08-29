@@ -125,7 +125,7 @@
   border-radius: 10px;
   cursor: pointer;
 
-  transform: translateX(-100%) rotateY(0) scale(0.8);
+  transform: translate3d(-125%, 0, -500px) rotateY(0);
   transition: transform $transition-params, box-shadow $transition-params;
   transform-style: preserve-3d;
 
@@ -142,12 +142,13 @@
   }
 
   &--opened {
-    transform: translateX(0) rotateY(180deg) scale(0.8);
+    transform: translate3d(25%, 0, -500px) rotateY(180deg);
   }
 
   &--zoomed {
+    transform: translate3d(-50%, 0, 0) rotateY(180deg);
+
     box-shadow: $fire-box-shadow;
-    transform: translateX(-50%) rotateY(180deg) scale(1);
   }
 }
 
