@@ -1,4 +1,4 @@
-import "./sass/main.scss";
+import "./sass/index.scss";
 
 import ancients from "./data/ancients";
 import difficulties from "./data/difficulties";
